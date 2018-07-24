@@ -24,7 +24,7 @@ function writeTodos(todos) {
 }
 
 function myHelper() {
-  console.log('Get help from these commands:\n 1- node . add = "Add a todo" \n 2- node . remove [type index to be removed]  = remove item from the list. \n 3- node . update = [type index to be updated]"type new todo here".\n 4- node . list  = List all items. \n 5- node . reset  = Reset the list.');
+  console.log('Get help from these commands :\n 1- node . add = "Add a todo". \n 2- node . remove [type index to be removed]  = remove item from the list. \n 3- node . update = [type index to be updated]"type new todo here".\n 4- node . list  = List all items. \n 5- node . reset  = Reset the list.');
 }
 
 switch (cmd) {
@@ -44,11 +44,11 @@ switch (cmd) {
     let item = args[1];
     readTodos()
       .then(todos => {
-        if (item > 0) {
-          todos.splice(item, 1);
+        if (item >= 0) {
+          todos.splice(item - 1, 1);
         }
         else {
-          console.log('Wrong input, please try again');
+          console.log('Wrong input please try again');
         }
         return todos;
       }).then(writeTodos);
@@ -60,7 +60,7 @@ switch (cmd) {
     readTodos()
       .then(todos => {
         if (updateItem >= 0 && typeof newItem === 'string') {
-          todos.splice(updateItem, 1);
+          todos.splice();
           todos[updateItem] = { todo: newItem };
         }
         else {
@@ -77,7 +77,6 @@ switch (cmd) {
   case 'reset':
     readTodos()
       .then(todos => {
-        // todos.splice(0, todos.length); ==== or u can use [] as shown below.
         todos.splice([]);
         return todos;
       }).then(writeTodos);
@@ -87,4 +86,3 @@ switch (cmd) {
     myHelper();
     break;
 }
-
