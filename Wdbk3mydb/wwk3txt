@@ -180,6 +180,15 @@ CREATE TABLE `employee` (
 );
 
 
+=========================
 
+An order management system for a food catering company that offers food delivery.
+
+The Entity Relationship Diagram has five Entities. 
+1. Relationship between customer and foodAndBeverageis one to many.Customer requests and item.
+2. Customer submits an order. This is a many ot many relationship.
+3. On order and delivery the relationship is many to many.
+4. On employment and delivery the relationship is one to many.
+5. On customer and delivery the relationship is many to many.
 
 
