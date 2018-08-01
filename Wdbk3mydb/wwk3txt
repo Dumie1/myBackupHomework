@@ -127,3 +127,59 @@
 +SET SQL_MODE=@OLD_SQL_MODE;
 +SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 +SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+==========================================================================
+=========================================================================
+
+
+CREATE TABLE `foodAndBeverages` (
+  `itemID (PK)` <type>,
+  `itemName` <type>,
+  `unitPrice` <type>,
+  `description` <type>,
+  `customerID (FK)` <type>
+);
+
+CREATE TABLE `customer` (
+  `customerID (PK)` <type>,
+  `customerFirstName` <type>,
+  `customerLastName` <type>,
+  `customerPhoneNumber` <type>
+);
+
+CREATE TABLE `order` (
+  `orderID (PK)` <type>,
+  `quantity` <type>,
+  `orderDate` <type>,
+  `customerID (FK)` <type>
+);
+
+CREATE TABLE `delivery` (
+  `deliveryID (PK)` <type>,
+  `deliveryTime` <type>,
+  `deliveryAddress` <type>,
+  `deliveryDate` <type>,
+  `orderID (FK)` <type>
+);
+
+CREATE TABLE `regularCustomer` (
+  `` <type>
+);
+
+CREATE TABLE `customerMember` (
+  `totalPurchases` <type>
+);
+
+CREATE TABLE `employee` (
+  `employeeID (PK)` <type>,
+  `employeeFirstName` <type>,
+  `employeeLastName` <type>,
+  `employeeAddress` <type>,
+  `employeePhoneNumber` <type>,
+  `deliveryID (FK)` <type>
+);
+
+
+
+
+
