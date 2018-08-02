@@ -191,4 +191,8 @@ The Entity Relationship Diagram has five Entities.
 4. On employment and delivery the relationship is one to many.
 5. On customer and delivery the relationship is many to many.
 
+- I did not include data types for each field in the E.R.D because i want to keep my diagram clean. i have included data
+types in the .sql file.
+- regulaCustomer and customerMemeber are optional entities. 
+
 
