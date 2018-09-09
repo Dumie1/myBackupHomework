@@ -163,3 +163,4 @@ function createAndAppend(name, parent, options = {}) {
 }
 
 this.addEventListener('load', main);
+
