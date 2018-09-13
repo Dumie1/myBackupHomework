@@ -37,7 +37,7 @@ function createServer(port) {
 
       default:
         response.writeHead(404, { 'Content-Type': 'application/json' });
-        response.end(JSON.stringify({ error: 'Not found' }));
+        response.end(JSON.stringify({ error: 'Not found here' }));
         break;
     }
   });
