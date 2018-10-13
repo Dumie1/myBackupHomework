@@ -10,7 +10,7 @@ class Description extends Component {
     }
 
     isTaskDone = (todo) => {
-        // console.log(todo);
+        
 
         todo.done = !todo.done;
         this.setState({
