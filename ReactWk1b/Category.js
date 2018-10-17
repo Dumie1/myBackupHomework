@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import TodoList from './TodoList';
+import React from 'react';
+import Items from './Items';
 
-class Description extends Component {
+class Category extends React.Component {
 
-    todo = TodoList.map((todoItems, index) => (
+    todo = Items.map((todoItems, index) => (
         <li key={index}>
             {`${todoItems.description} , ${todoItems.deadLine}`}
         </li>
@@ -18,4 +18,4 @@ class Description extends Component {
     }
 }
 
-export default Description;
+export default Category;
