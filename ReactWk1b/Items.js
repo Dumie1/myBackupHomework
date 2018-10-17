@@ -1,5 +1,6 @@
 // array of objects
-//use let so that we can be able to edit or delet a todo later
+//use let so that we can be able to edit or delete a todo later
+
 let todoItems = [
     {
         description: "Get out of bed",
