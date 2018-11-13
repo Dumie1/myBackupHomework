@@ -1,4 +1,4 @@
-iimport React from 'react';
+import React from 'react';
 import Todos from './Todos.json';
 import Form from './Form';
 
@@ -45,7 +45,7 @@ class Data extends React.Component {
     });
   };
 
-  renderTodos = () => {
+  renderTodos = () =>{
     if (this.state.Todos.length === 0)
       return <p className='noItems'>No items...</p>;
     const textStyle = {
@@ -54,14 +54,14 @@ class Data extends React.Component {
     };
 
     return (
-      <ul>
-        {Todos.map((todo, id) => {
+        <ul>
+        {this.state.Todos.map((todo, id) => {
           return (
             <li key={id}>
               <input
                 checked={todo.done}
                 type='checkbox'
-                onChange={()=>this.isTaskDone(todo)}
+                onChange={() => this.isTaskDone(todo)}
               />
               <span style={todo.done ? textStyle : null}>
                 {todo.description} , {todo.deadline}
@@ -72,7 +72,7 @@ class Data extends React.Component {
             </li>
           );
         })}
-      </ul>
+        </ul>
     );
   };
 
@@ -85,7 +85,6 @@ class Data extends React.Component {
           deadlineInput={this.deadlineInput}
         />
         <div className='items'>{this.renderTodos()}</div>
-        
       </div>
     );
   }
