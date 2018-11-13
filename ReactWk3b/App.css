@@ -15,19 +15,16 @@
   text-align: left;
   padding-left: 100px;
 }
-
 .App-link {
   color: #61dafb;
 }
 /* My extra code below */
-
 .designLogo{
   color: rgb(29, 250, 129);
   border-radius: 10px;
   padding:2px;
   background: rgb(15, 15, 15);
 }
-
 .items{
   background: #eeeeee;
   list-style: none;
@@ -44,14 +41,12 @@
   color: #ffff;
   font-size: 20px;
   border-radius: 10px;
-  
 } 
 li:hover{
     opacity: 0.9;
 }
 ul{
   width:90%;
-  
 }
 .noItems{
   background: hsl(246, 100%, 71%);
@@ -86,7 +81,7 @@ ul{
 form{
   margin: 20px;
   padding: 20px;
-  font-size: 25px;
+  font-size: 20px;
   color: rgb(5, 5, 53);
   font-weight: bold;
 }
@@ -112,5 +107,5 @@ input:hover{
   margin-right:40px;
   background: #062049;
   color: white;
-  font-size: 25px;
+  font-size: 20px;
 }
